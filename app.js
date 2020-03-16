@@ -22,6 +22,14 @@ app.get("/", function(req, res) {
   res.render("home", { startingContent: homeStartingContent }); //key: value. key has to match what is in home.js and then the value will be rendered onto the screen
 });
 
+app.get("/about", function(req, res) {
+  res.render("about", { aboutContent: aboutContent }); //key: value. key has to match what is in home.js and then the value will be rendered onto the screen
+});
+
+app.get("/contact", function(req, res) {
+  // "/contact = route rout
+  res.render("contact", { contactContent: contactContent }); //key: value. key has to match what is in home.js and then the value will be rendered onto the screen
+});
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
